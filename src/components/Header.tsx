@@ -1,5 +1,6 @@
 import { RiAccountCircleLine } from 'react-icons/Ri';
 import { useState } from 'react';
+import Button from './UI/Button.jsx'
 
 function Header() {
     const [login, setLogin] = useState(false);
@@ -18,13 +19,9 @@ function Header() {
                     <RiAccountCircleLine />
                 </button>
             </div>
-           {login && <div className='flex flex-col bg-white w-3/6 m-5'>
-                <button className='bg-orange-500 text-white text-2xl p-2 m-3'>
-                    Zaloguj sie
-                </button>
-                <button className='bg-orange-500 text-white text-2xl p-2 m-3'>
-                    Zarejestruj sie
-                </button>
+           {login && <div className='flex flex-col bg-white w-3/6 m-5 p-2'>
+                <Button text={'Zaloguj sie'} />
+                <Button text={'Zarejestruj sie'} />
             </div> }
         </>
     );
