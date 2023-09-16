@@ -10,18 +10,18 @@ function Header() {
     };
     return (
         <>
-            <div className='bg-white flex justify-between items-center py-3'>
-                <h1 className='text-orange-500 font-bold text-4xl mx-2'>
+            <div className='bg-white flex justify-between items-center p-3'>
+                <h1 className='text-orange-500 font-bold text-4xl '>
                     GratMarket
                 </h1>
                 <button
-                    className={`text-5xl mx-2 ${login && 'text-orange-500'} `}
+                    className={`text-5xl ${login && 'text-orange-500'} `}
                     onClick={handleLogin}>
                     <RiAccountCircleLine />
                 </button>
             </div>
             {login && (
-                <div className='flex flex-col bg-white w-3/6 m-3 p-2 absolute right-0'>
+                <div className='flex flex-col bg-white w-3/6 m-3 p-2 absolute right-0 max-w-md'>
                     <Button text={'Zaloguj sie'} />
                     <Button text={'Zarejestruj sie'} />
                 </div>
