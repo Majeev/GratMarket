@@ -8,6 +8,7 @@ function Header() {
     const handleLogin = () => {
         setLogin(!login);
     };
+
     return (
         <>
             <div className='bg-white flex justify-between items-center p-3'>
@@ -22,8 +23,8 @@ function Header() {
             </div>
             {login && (
                 <div className='flex flex-col bg-white w-3/6 m-3 p-2 absolute right-0 max-w-md'>
-                    <Button text={'Zaloguj sie'} />
-                    <Button text={'Zarejestruj sie'} />
+                    <Button text={'Zaloguj sie'} path={'/login'} />
+                    <Button text={'Zarejestruj sie'} path={'/register'} />
                 </div>
             )}
         </>
